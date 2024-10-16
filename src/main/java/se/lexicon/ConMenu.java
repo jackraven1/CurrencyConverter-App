@@ -3,12 +3,12 @@ package se.lexicon;
 import java.util.Scanner;
 
 public class ConMenu {
-    public Converter converter=new Converter();
-    public Scanner scanner=new Scanner(System.in);
+    public Converter converter = new Converter();
+    public Scanner scanner = new Scanner(System.in);
 
-    public void displayMenu(){
+    public void displayMenu() {
         boolean isActive = true;
-        while (isActive){
+        while (isActive) {
             System.out.println("**Currency Converter**");
             System.out.println("choose one of the following operations");
             System.out.println("1.Sek to Usd");
@@ -18,21 +18,21 @@ public class ConMenu {
             System.out.println("5.Exit");
 
             int userChoice = validChoice();
-            switch (userChoice){
+            switch (userChoice) {
                 case 1:
-                    converter.convert("sek","USD",0.09);
+                    converter.convert("sek", "USD", 0.09);
                     break;
                 case 2:
-                    converter.convert("USD","Sek",10.42);
+                    converter.convert("USD", "Sek", 10.42);
                     break;
                 case 3:
-                    converter.convert("Sek","Eur",0.08);
+                    converter.convert("Sek", "Eur", 0.08);
                     break;
                 case 4:
-                    converter.convert("Euro","Sek",11.34);
+                    converter.convert("Euro", "Sek", 11.34);
                     break;
                 case 5:
-                    isActive=false;
+                    isActive = false;
                     System.out.println("Thank you!! bye bye..");
                     break;
                 default:
@@ -40,8 +40,9 @@ public class ConMenu {
             }
         }
     }
-    public int validChoice(){
-        while (!scanner.hasNextInt()){
+
+    public int validChoice() {
+        while (!scanner.hasNextInt()) {
             System.out.println("Please enter a valid input between 1-5");
             scanner.next();
         }

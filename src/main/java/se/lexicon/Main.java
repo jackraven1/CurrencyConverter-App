@@ -2,7 +2,7 @@ package se.lexicon;
 
 public class Main {
     public static void main(String[] args) {
-        ConMenu menu = new ConMenu() ;
+        ConMenu menu = new ConMenu();
         menu.displayMenu();
     }
 }
